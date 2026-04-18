@@ -1,63 +1,93 @@
-# 🏥 MediTriage — AI-Powered Healthcare Triage Platform
+# 🏥 Nexus Healer — AI-Powered Healthcare Triage Platform
 
-An intelligent healthcare triage system that assesses patient symptoms using AI (Google Gemini) with a rule-based fallback engine. Built with Node.js, Express, and Firebase.
+**Nexus Healer** is an intelligent healthcare triage system that leverages **Google Gemini AI** to analyze patient symptoms in real-time and deliver instant, prioritized medical assessments. Built for speed and accuracy, it combines cutting-edge AI with a robust rule-based fallback engine — ensuring it works reliably even without an API key.
 
-## Features
+## ✨ What It Does
 
-- **AI-Powered Triage** — Uses Google Gemini for intelligent symptom analysis
-- **Rule-Based Fallback** — Works without any API key using a comprehensive symptom database
-- **Real-Time Dashboard** — Admin panel to monitor and manage patient assessments
-- **Firebase Integration** — Cloud Firestore for persistent data storage
-- **Vital Signs Assessment** — Analyzes blood pressure, temperature, heart rate, and oxygen levels
+Patients enter their symptoms and vital signs, and Nexus Healer instantly:
+- 🔍 **Identifies potential conditions** with confidence scores
+- 🚨 **Assigns a triage priority** (HIGH / MEDIUM / LOW) based on severity
+- 📊 **Calculates a risk score** (0–100) factoring in vitals and demographics
+- 💊 **Provides actionable recommendations** and immediate actions
+- 📈 **Logs all assessments** to a cloud dashboard for medical staff review
 
-## Quick Start
+## 🤖 AI Integration
+
+| Feature | Details |
+|---------|---------|
+| **Primary AI** | Google Gemini 2.0 Flash via `@google/generative-ai` SDK |
+| **Fallback Engine** | Comprehensive rule-based triage with 50+ symptom patterns |
+| **Symptom Analysis** | NLP-driven extraction and matching of patient descriptions |
+| **Vital Signs AI** | Automated assessment of BP, temperature, heart rate, and SpO₂ |
+| **Confidence Scoring** | AI returns ranked conditions with probability percentages |
+
+The system gracefully degrades — if the Gemini API key is unavailable or the AI call fails, it automatically falls back to the built-in rule-based engine with zero downtime.
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Backend** | Node.js, Express.js |
+| **AI Engine** | Google Gemini 2.0 Flash (Generative AI) |
+| **Database** | Google Cloud Firestore (Firebase) |
+| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
+| **Styling** | Custom CSS with glassmorphism, gradients & Inter font |
+| **Authentication** | Firebase Auth (admin dashboard) |
+| **Deployment** | Node.js server with static file serving |
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18+)
-- A Firebase project (for data storage)
+- [Node.js](https://nodejs.org/) v18+
+- A Firebase project (for data persistence)
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/meditriage.git
-cd meditriage
+git clone https://github.com/tnex0734-ops/nexus-healer.git
+cd nexus-healer
 
 # Install dependencies
 npm install
 
 # Set up environment variables
 cp .env.example .env
-# Edit .env with your API keys
+# Edit .env and add your Gemini API key (optional)
 
 # Start the server
 npm start
 ```
 
+The app runs at `http://localhost:3000` — the admin dashboard is at `http://localhost:3000/admin`.
+
 ### Environment Variables
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `GEMINI_API_KEY` | No | Google Gemini API key for AI triage (falls back to rule-based without it) |
-| `PORT` | No | Server port (default: 3000) |
+| `GEMINI_API_KEY` | No | Google Gemini API key for AI-powered triage. Without it, the rule-based engine handles everything. |
+| `PORT` | No | Server port (default: `3000`) |
 
-## Security
+## 📋 Features
 
-- **Environment variables** are stored in `.env` (never committed to git)
-- **Firebase Security Rules** should be configured to restrict database access
-- See [SECURITY.md](SECURITY.md) for vulnerability reporting
+- **AI-Powered Symptom Triage** — Intelligent analysis using Google Gemini
+- **Rule-Based Fallback** — 50+ symptom patterns work offline without any API key
+- **Vital Signs Assessment** — Analyzes blood pressure, temperature, heart rate, SpO₂
+- **Risk Scoring** — Dynamic 0–100 risk calculation with age/vitals adjustments
+- **Admin Dashboard** — Real-time monitoring of all patient assessments
+- **Cloud Persistence** — All triage data stored in Google Cloud Firestore
+- **Responsive Design** — Premium glassmorphism UI with Inter typography
 
-## Tech Stack
+## 🔒 Security
 
-- **Backend**: Node.js, Express
-- **AI**: Google Gemini 2.0 Flash
-- **Database**: Google Cloud Firestore
-- **Frontend**: HTML, CSS, JavaScript
+- Server-side API keys are stored in `.env` (never committed to git)
+- Firebase client config uses security rules for access control
+- See [SECURITY.md](SECURITY.md) for the full security policy and recommended Firestore rules
 
-## License
+## 📄 License
 
 MIT
 
 ---
 
-> ⚠️ **Disclaimer**: This is a demonstration project. Always consult qualified healthcare professionals for medical advice.
+> ⚠️ **Disclaimer**: Nexus Healer is a demonstration/educational project. Always consult qualified healthcare professionals for medical advice. This tool is not a substitute for professional medical diagnosis.
