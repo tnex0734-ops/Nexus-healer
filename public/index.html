@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexus Healer - AI-Powered Healthcare Triage Platform. Quickly assess patient symptoms, predict conditions, and assign priority levels.">
+  <title>Nexus Healer — AI-Powered Healthcare Triage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <span class="logo-text">Nexus<span class="logo-accent">Healer</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#triage">Triage Tool</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="#triage" class="nav-cta">Start Assessment</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-elements">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          AI-Powered Triage System
+        </div>
+        <h1 class="hero-title">
+          Smarter Triage,<br>
+          <span class="gradient-text">Faster Care</span>
+        </h1>
+        <p class="hero-description">
+          Reduce hospital wait times with AI-driven symptom analysis. 
+          Our platform assists medical staff in quickly identifying high-risk patients 
+          and prioritizing emergency care.
+        </p>
+        <div class="hero-actions">
+          <a href="#triage" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Start Assessment
+          </a>
+          <a href="#features" class="btn btn-ghost btn-lg">
+            Learn More
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="90">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">Accuracy Rate</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="60">0</span><span class="stat-suffix">sec</span>
+            <span class="stat-label">Avg. Response</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="3">0</span><span class="stat-suffix">Levels</span>
+            <span class="stat-label">Priority Triage</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="floating-card card-vitals">
+            <div class="fc-icon fc-icon-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div>
+              <div class="fc-label">Heart Rate</div>
+              <div class="fc-value">72 <small>bpm</small></div>
+            </div>
+          </div>
+          <div class="floating-card card-priority">
+            <div class="fc-icon fc-icon-red">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <div class="fc-label">Priority</div>
+              <div class="fc-value priority-high">HIGH</div>
+            </div>
+          </div>
+          <div class="floating-card card-ai">
+            <div class="fc-icon fc-icon-purple">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/><path d="M5 10a2 2 0 0 0 0 4"/><path d="M19 10a2 2 0 0 1 0 4"/></svg>
+            </div>
+            <div>
+              <div class="fc-label">AI Analysis</div>
+              <div class="fc-value fc-small">Processing...</div>
+            </div>
+          </div>
+          <div class="hero-main-visual">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring pulse-ring-2"></div>
+            <div class="visual-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Core Features</span>
+        <h2 class="section-title">Everything You Need for<br><span class="gradient-text">Efficient Triage</span></h2>
+        <p class="section-subtitle">Our AI-powered platform streamlines the triage process with intelligent symptom analysis, accurate disease prediction, and instant priority classification.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-animate>
+          <div class="feature-icon feature-icon-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 18.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"/>
+              <path d="M12 2v2"/><path d="M12 20v2"/>
+              <path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/>
+              <path d="M2 12h2"/><path d="M20 12h2"/>
+              <path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Symptom Analysis</h3>
+          <p class="feature-desc">Input symptoms via text or voice. Our NLP engine extracts and categorizes symptoms intelligently for accurate assessment.</p>
+          <div class="feature-tags">
+            <span class="tag">Text Input</span>
+            <span class="tag">Voice Input</span>
+            <span class="tag">NLP</span>
+          </div>
+        </div>
+        <div class="feature-card feature-card-highlighted" data-animate>
+          <div class="feature-icon feature-icon-teal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/>
+              <path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/>
+              <path d="M5 10a2 2 0 0 0 0 4"/><path d="M19 10a2 2 0 0 1 0 4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">AI Disease Prediction</h3>
+          <p class="feature-desc">Powered by Google Gemini AI, our system predicts probable conditions with confidence scores based on symptoms and vitals.</p>
+          <div class="feature-tags">
+            <span class="tag">Gemini AI</span>
+            <span class="tag">ML Model</span>
+            <span class="tag">Prediction</span>
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon feature-icon-orange">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 20h.01"/>
+              <path d="M7 20v-4"/>
+              <path d="M12 20v-8"/>
+              <path d="M17 20V8"/>
+              <path d="M22 4v16"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Priority Tagging</h3>
+          <p class="feature-desc">Instantly classify patients into HIGH, MEDIUM, or LOW priority with color-coded badges and risk scores for quick decision-making.</p>
+          <div class="feature-tags">
+            <span class="tag">HIGH</span>
+            <span class="tag">MEDIUM</span>
+            <span class="tag">LOW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">How It Works</span>
+        <h2 class="section-title">Simple 3-Step<br><span class="gradient-text">Triage Process</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card" data-animate>
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+              <path d="m15 5 4 4"/>
+            </svg>
+          </div>
+          <h3>Input Symptoms</h3>
+          <p>Type or speak your symptoms. Add vital signs like blood pressure, temperature, and heart rate for a comprehensive assessment.</p>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><path d="M0 12h36m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step-card" data-animate>
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h3"/><path d="M7 12h10"/><path d="M7 17h6"/>
+            </svg>
+          </div>
+          <h3>AI Analysis</h3>
+          <p>Our AI engine powered by Google Gemini processes your input, extracts symptoms via NLP, and runs predictive analysis against medical knowledge.</p>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none"><path d="M0 12h36m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step-card" data-animate>
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/>
+            </svg>
+          </div>
+          <h3>Get Results</h3>
+          <p>Receive predicted conditions with confidence scores, a priority level tag, risk assessment, and actionable recommendations instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Triage Tool Section -->
+  <section class="triage-section" id="triage">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">AI Triage Tool</span>
+        <h2 class="section-title">Start Your<br><span class="gradient-text">Assessment Now</span></h2>
+        <p class="section-subtitle">Enter patient symptoms and health parameters for an AI-powered triage assessment.</p>
+      </div>
+      <div class="triage-layout">
+        <!-- Input Panel -->
+        <div class="triage-input-panel">
+          <form id="triageForm" class="triage-form">
+            <!-- Symptom Input -->
+            <div class="form-section">
+              <h3 class="form-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                Symptom Description
+              </h3>
+              <div class="symptom-input-wrap">
+                <textarea id="symptomInput" class="form-textarea" placeholder="Describe the patient's symptoms in detail... &#10;&#10;Example: severe headache for 3 days, nausea, blurred vision, sensitivity to light" rows="4" required></textarea>
+                <button type="button" class="voice-btn" id="voiceBtn" aria-label="Voice input">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                    <line x1="12" x2="12" y1="19" y2="22"/>
+                  </svg>
+                  <span class="voice-label">Voice</span>
+                </button>
+              </div>
+              <div class="voice-status" id="voiceStatus" style="display:none;">
+                <div class="voice-indicator"></div>
+                <span>Listening... Speak now</span>
+              </div>
+            </div>
+
+            <!-- Health Parameters -->
+            <div class="form-section">
+              <h3 class="form-section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                Health Parameters
+              </h3>
+              <div class="params-grid">
+                <div class="form-group">
+                  <label for="ageInput" class="form-label">Age</label>
+                  <input type="number" id="ageInput" class="form-input" placeholder="e.g. 45" min="0" max="120">
+                </div>
+                <div class="form-group">
+                  <label for="genderInput" class="form-label">Gender</label>
+                  <select id="genderInput" class="form-input">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bpInput" class="form-label">Blood Pressure</label>
+                  <input type="text" id="bpInput" class="form-input" placeholder="e.g. 120/80">
+                </div>
+                <div class="form-group">
+                  <label for="tempInput" class="form-label">Temperature (°F)</label>
+                  <input type="number" id="tempInput" class="form-input" placeholder="e.g. 98.6" step="0.1">
+                </div>
+                <div class="form-group">
+                  <label for="hrInput" class="form-label">Heart Rate (bpm)</label>
+                  <input type="number" id="hrInput" class="form-input" placeholder="e.g. 72" min="0" max="300">
+                </div>
+                <div class="form-group">
+                  <label for="o2Input" class="form-label">O₂ Saturation (%)</label>
+                  <input type="number" id="o2Input" class="form-input" placeholder="e.g. 98" min="0" max="100">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <span>Analyze & Triage</span>
+            </button>
+            <p class="form-disclaimer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              For demonstration purposes only. Always consult a qualified healthcare professional.
+            </p>
+          </form>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="triage-results-panel" id="resultsPanel">
+          <!-- Empty State -->
+          <div class="results-empty" id="resultsEmpty">
+            <div class="empty-illustration">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </div>
+            <h3>Ready for Assessment</h3>
+            <p>Enter patient symptoms and health parameters, then click "Analyze & Triage" to get AI-powered triage results.</p>
+          </div>
+
+          <!-- Loading State -->
+          <div class="results-loading" id="resultsLoading" style="display:none;">
+            <div class="loading-animation">
+              <div class="loading-pulse"></div>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Analyzing Symptoms...</h3>
+            <p>Our AI is processing your input and generating a triage assessment.</p>
+            <div class="loading-steps">
+              <div class="loading-step active" id="step1">
+                <div class="step-dot"></div>
+                <span>Extracting symptoms</span>
+              </div>
+              <div class="loading-step" id="step2">
+                <div class="step-dot"></div>
+                <span>Running disease prediction</span>
+              </div>
+              <div class="loading-step" id="step3">
+                <div class="step-dot"></div>
+                <span>Calculating priority level</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Content -->
+          <div class="results-content" id="resultsContent" style="display:none;">
+            <!-- Priority Badge -->
+            <div class="priority-banner" id="priorityBanner">
+              <div class="priority-badge-large" id="priorityBadge">
+                <span class="priority-label" id="priorityLabel">HIGH</span>
+              </div>
+              <div class="priority-info">
+                <span class="priority-text">Priority Level</span>
+                <p class="priority-reason" id="priorityReason">-</p>
+              </div>
+            </div>
+
+            <!-- Risk Score -->
+            <div class="risk-score-card" id="riskCard">
+              <div class="risk-header">
+                <h4>Risk Score</h4>
+                <span class="risk-value" id="riskValue">0</span>
+              </div>
+              <div class="risk-bar-container">
+                <div class="risk-bar" id="riskBar" style="width:0%"></div>
+              </div>
+              <div class="risk-labels">
+                <span>Low</span><span>Medium</span><span>High</span>
+              </div>
+            </div>
+
+            <!-- Vital Signs Assessment -->
+            <div class="result-section" id="vitalsSection">
+              <h4 class="result-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                Vital Signs Assessment
+              </h4>
+              <p class="vitals-text" id="vitalsText">-</p>
+            </div>
+
+            <!-- Extracted Symptoms -->
+            <div class="result-section" id="symptomsSection">
+              <h4 class="result-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Extracted Symptoms
+              </h4>
+              <div class="symptom-tags" id="symptomTags"></div>
+            </div>
+
+            <!-- Predicted Conditions -->
+            <div class="result-section">
+              <h4 class="result-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/></svg>
+                Predicted Conditions
+              </h4>
+              <div class="conditions-list" id="conditionsList"></div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="result-section">
+              <h4 class="result-section-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                Recommendations
+              </h4>
+              <ul class="recommendations-list" id="recommendationsList"></ul>
+            </div>
+
+            <!-- Immediate Actions -->
+            <div class="result-section" id="actionsSection">
+              <h4 class="result-section-title result-title-danger">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Immediate Actions
+              </h4>
+              <ul class="actions-list" id="actionsList"></ul>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="result-disclaimer" id="disclaimer"></div>
+
+            <button type="button" class="btn btn-ghost btn-block" id="resetBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              New Assessment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-animate>
+          <div class="stat-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="stat-card-value">70<span>%</span></div>
+          <div class="stat-card-label">Reduction in Wait Time</div>
+        </div>
+        <div class="stat-card" data-animate>
+          <div class="stat-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="stat-card-value">10K<span>+</span></div>
+          <div class="stat-card-label">Patients Assessed</div>
+        </div>
+        <div class="stat-card" data-animate>
+          <div class="stat-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          </div>
+          <div class="stat-card-value">95<span>%</span></div>
+          <div class="stat-card-label">Doctor Satisfaction</div>
+        </div>
+        <div class="stat-card" data-animate>
+          <div class="stat-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <div class="stat-card-value">24<span>/7</span></div>
+          <div class="stat-card-label">Available Anytime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <span class="logo-text">Nexus<span class="logo-accent">Healer</span></span>
+          </a>
+          <p>AI-Powered Healthcare Triage Platform. Helping hospitals reduce wait times and prioritize critical patients.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#triage">Triage Tool</a>
+          <a href="#about">How It Works</a>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">API Reference</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="#">support@nexushealer.ai</a>
+          <a href="#">Emergency: 911</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nexus Healer. Built for Healthcare Hackathon. For demonstration purposes only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
