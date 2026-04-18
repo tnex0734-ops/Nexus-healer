@@ -9,6 +9,9 @@ package-lock.json
 .env.production
 .env.*.local
 
+# API Keys
+public/firebase-config.js
+
 # IDE / Editor
 .vscode/
 .idea/
